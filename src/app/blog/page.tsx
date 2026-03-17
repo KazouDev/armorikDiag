@@ -35,7 +35,7 @@ export default async function BlogPage({
   const pageParam = typeof resolvedSearchParams.page === "string" ? resolvedSearchParams.page : "1";
   const page = parseInt(pageParam, 10) || 1;
 
-  const PAGE_LIMIT = 3;
+  const PAGE_LIMIT = 12;
   const { articles, hasNextPage } = await getArticles(PAGE_LIMIT, page, q);
 
   return (
